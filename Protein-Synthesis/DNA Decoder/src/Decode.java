@@ -80,6 +80,24 @@ public class Decode {
 			}
 		} else if (t.substring(0, 1).equalsIgnoreCase("G")) {
 			// Begins with G
+			if(t.substring(1,2).equalsIgnoreCase("A")) {
+				if(t.substring(2,3).equalsIgnoreCase("A") || t.substring(2,3).equalsIgnoreCase("G")) {
+					// GAA or GAG
+					output.setText(output.getText() + "Glutamic Acid ");
+				}
+				else if(t.substring(2,3).equalsIgnoreCase("T") || t.substring(2,3).equalsIgnoreCase("C")) {
+					output.setText(output.getText() + "Aspartic Acid ");
+				}
+			}
+			else if(t.substring(1,2).equalsIgnoreCase("G")) {
+				output.setText(output.getText() + "Glycine ");
+			}
+			else if(t.substring(1,2).equalsIgnoreCase("T")) {
+				output.setText(output.getText() + "Valine ");
+			}
+			else if(t.substring(1,2).equalsIgnoreCase("C")) {
+				output.setText(output.getText() + "Alanine ");
+			}
 		} else if (t.substring(0, 1).equalsIgnoreCase("C")) {
 			// Begins with C
 		} else if (t.substring(0, 1).equalsIgnoreCase("T")) {
